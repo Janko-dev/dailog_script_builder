@@ -1,0 +1,46 @@
+[start]
+D: Welcome. Today we witness a conversation between two programmers who apply the method of 7 C's. Pay close attention, maybe even pause the video? Let's listen to them.
+
+[video="7Cs"]
+
+[title="Capture"]
+
+J: Hi Bill.
+B: Hi Jill. An acquaintance of mine came up with a problem for which we can write a program. Listen to this. She organizes a chess tournament and needs a game schedule for that, in which everyone who loses a game is immediately out of the tournament. In the end, only the very best remain and that person is the winner. There is only one round every day and it would be nice if the tournament didn't take an unnecessarily long time. Furthermore, everyone plays a maximum of one game per day.
+J: Is that all the information? Then I have some questions.
+B: Well, she said that we ourselves should make all other decisions wisely.
+J: Do we know how many participants are involved?
+B: No, apparently that will come later. 
+J: Okay, so conclusion: make a game schedule for an unknown number of players according to the knockout principle, and minimize the duration of the tournament.
+
+[image="input_output", 2]
+
+D: Sometimes you are given answers to your questions, sometimes you have to wait and see. So much for the Capture. Let's move on to the Contemplate-phase.
+
+[title="Contemplate"]
+
+J: Okay, let's list what we do and don't know. The number of participants is not fixed and I get why that is the case. That makes our program flexible so that it can be used in multiple tournaments.
+B: This only applies to tournaments that work according to the knockout principle. That means that the best player wins, but that says nothing about the qualities of the other players.
+J: What do we record about the number of players? A minimum of 2 and no maximum?
+B: That seems reasonable. Oh, something else: we will have to decide what to do with a game that ends in a draw. Someone has to drop out.
+J: Maybe flip a coin?
+B: You could also let them both drop out or let them continue both.
+J: But then we can't plan ahead. We do not know in advance how many people will participate on the next day. We just assume that a winner will be named anyway. How that will be decided, we leave open for now; that is up to the tournament director to decide.
+B: It is also desirable to have as many games as possible on the same day. So we have to let everyone play every day who hasn't dropped out yet.
+J: That only works if the number of participants is a power of 2; otherwise you won't have an even number of survivors every day.
+B: Hmm, let me think, yes indeed, a power of 2 is the only way to always have an even number of players left. Shall we demand that the number of participants is a power of 2?
+J: No, that would be a strange requirement. It severely limits the number of participants. Let's keep it to at least 2 players and don't demand anything regarding the number of participants.
+B: So what do we do with an odd number of participants on a day? In that case one person can't play anyway.
+J: That one is lucky and automatically passes on to the next day. That's not a bad thing, because he will drop out at some point, if he's not the very best.
+B: Okay. Let's do that every day with an odd number of participants.
+J: Say, what exactly is the desired output? What does a game schedule look like?
+B: It's not about the visual form but about the information stored in it. If we give each participant a unique number, we can draw up a list of numbers for each day in which two consecutive ones play against each other. If there is an odd number, we will immediately pass on the last one from the list to the next day. Eventually we get something like a list of daily lists. That's the game schedule.
+
+[image="desired_output", 2]
+
+J: Wait a minute, that's not possible in the way you describe. In that case we would have to know in advance who will win in each game. So we cannot put player numbers in such a list. But if we instead come up with a way to code winners from the previous day, then your approach is doable.
+B: Indeed; we don't need player numbers but winner numbers. For example: w3 means the winner of the third game from the previous day.
+
+[image="winner_numbers", 2]
+
+D: You see it's not as easy as it looks. So much for the contemplate phase. Let's move on to the next step of 7 C's: Contract.
