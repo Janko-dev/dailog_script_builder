@@ -44,3 +44,72 @@ B: Indeed; we don't need player numbers but winner numbers. For example: w3 mean
 [image="winner_numbers", 2]
 
 D: You see it's not as easy as it looks. So much for the contemplate phase. Let's move on to the next step of 7 C's: Contract.
+
+[title="Contract"]
+
+B: Now let's draw up the contract. As input we choose a number called n which represents the number of participants. It must be an integer greater than or equal to 2.
+J: Yes. And the output is a list of daily lists containing the winner codes from the previous day. 
+B: Then the last daily list must consist of 2 codes; that's the final.
+J: Do we also know how many days are played, if we know n and we want to minimize the number of playing days?
+B: Yes, you can calculate that: you have to take the base two logarithm of n and round it up.
+
+[image="2logn", 1]
+
+J: Okay, we're there; let's write this a little more formally.
+
+[image="algorithm", 3]
+
+B: So the first daily list has n elements and the last one has 2 elements.
+D: It's getting somewhere don't you think? Now we are ready for the Compose step.
+
+[title="Compose"]
+
+J: In what parts could we break this problem down?
+B: The first is: preparing the list for the first day. That's just a list from w1 to wn where n is the number of participants. Should we link their names to that?
+J: No, of course not. After all, we will not receive names, only the number of participants. Who is hiding behind the code w27 is not important to us. This must be recorded outside the program.
+B: Yes, that's right. And then we have the problem of making the next day's list. You should be able to repeat this for every day until the list consists of only two elements.
+J: Because we use the same codes every day, you really only need to know how long the list from the previous day was. That's enough information to make the current day's list.
+J: Oh wait, it can also be done differently. You don't actually need the list from the previous day. We know how long the list should be per day, we've described that in our post condition. 
+B: This conclusion comes rather fast. Let's take a closer look at that post condition.
+
+[image="post_condition", 2]
+
+J: Um…, I think I understand. Let's move on.
+B: In that case we don't have to treat the first day as a separate case either.
+J: Indeed. That is not necessary.
+B: Besides making such a daily list, we also need to add that list to our game schedule.
+J: These two subproblems are probably so simple that we don't need to write a separate function for them. Although it might make the program better readable. We then need something like: “make day i”, “add daily list to game schedule”.
+B: Shall we now apply the 7 C's to these subproblems and then move on?
+J: Yes, let's do that first, otherwise we can't go any further. Another thing comes to mind: what do we do with the situation when the input does not meet the requirements? Do we check for that?
+B: Preferably not. I suggest that, as always, we apply Design by Contract and not move to Defensive Programming now. 
+D: Let's stop here for a moment to explain these two terms.
+
+[video="DFP"]
+
+J: So now we still have to solve those 2 subproblems and then perform the Chart, Code and Check phases of the main problem. 
+D: Now we fast forward. You can do this yourself.
+J: We have now solved the 2 sub-problems and have the following 2 functions
+
+[image="functions", 3]
+
+D: It's getting more complex but also more exciting right? Now we have arrived at the Chart phase for the main program.
+
+[title="Chart"]
+
+B: With these two tools it becomes very easy: we have to make a daily list for each day and add it to the playlist.
+J: Indeed, it is. The main program then looks like this in pseudocode. 
+
+[image="pseudocode", 2]
+
+D: The real work is done, now all that remains is the translation from design to code. In other words we have to translate our design to a language that the computer is able to understand. You can also do the Code phase yourself. We continue with the Check phase.
+
+[title="Check"]
+
+B: Finally we have to draw up and implement a test plan. 
+J: We do. Given the precondition, we will test the postcondition. As edge cases, I suggest n=2 and n=3. For the normal cases we can take n=9, n=15, n=32, n=53.
+B: Agreed. That 32 is also a nice power of 2. And 9 and 15 are just above and below a power of 2, and 53 is a prime number and those are always fun.
+J: So the test plan looks like this:
+
+[image="testplan", 2]
+
+D: The last step is just a formality. A check is needed to confirm that the work was done correctly. If the check fails, then something went wrong in the first 6 steps. But I don't expect this to be the outcome. At this point, we leave both programmers. Try to solve the 2 subproblems yourself and finish the code and test phase of the main program. I suggest you take a good look at the post condition, use it for makeDay(i, n). Thanks for watching, have fun solving your own programming problems, and see you soon. 
