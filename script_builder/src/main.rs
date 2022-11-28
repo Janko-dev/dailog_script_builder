@@ -1,6 +1,6 @@
 use std::{error::Error, fs};
 
-use dailog_builder::parse_script;
+use script_builder::parse_script;
 
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -15,7 +15,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     };
 
     fs::write("output/script.json", format!("{:#}", json.result))?;
-    // print!("{:#}", json.result);
 
     Ok(())
 }

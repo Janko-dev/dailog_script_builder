@@ -1,0 +1,6 @@
+/output/*
+!/output/.gitkeep
+
+__pycache__
+
+config.py

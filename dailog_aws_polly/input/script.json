@@ -1,0 +1,478 @@
+{
+    "titles": [
+        {
+            "title": "Capture",
+            "at_index": 1
+        },
+        {
+            "title": "Contemplate",
+            "at_index": 9
+        },
+        {
+            "title": "Contract",
+            "at_index": 28
+        },
+        {
+            "title": "Compose",
+            "at_index": 36
+        },
+        {
+            "title": "Chart",
+            "at_index": 56
+        },
+        {
+            "title": "Check",
+            "at_index": 59
+        }
+    ],
+    "script": [
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "7Cs",
+            "text": "<speak> Welcome. Today we witness a conversation between two programmers who apply the method of 7 C's. Pay close attention, maybe even pause the video? Let's listen to them.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Hi Bill.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Hi Jill. An acquaintance of mine came up with a problem for which we can write a program. Listen to this. She organizes a chess tournament and needs a game schedule for that, in which everyone who loses a game is immediately out of the tournament. In the end, only the very best remain and that person is the winner. There is only one round every day and it would be nice if the tournament didn't take an unnecessarily long time. Furthermore, everyone plays a maximum of one game per day.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Is that all the information? Then I have some questions.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Well, she said that we ourselves should make all other decisions wisely.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Do we know how many participants are involved?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> No, apparently that will come later. </speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "input_output",
+            "video": "",
+            "text": "<speak> Okay, so conclusion: make a game schedule for an unknown number of players according to the knockout principle, and minimize the duration of the tournament.</speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "input_output",
+            "video": "",
+            "text": "<speak> Sometimes you are given answers to your questions, sometimes you have to wait and see. So much for the Capture. Let's move on to the Contemplate-phase.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Okay, let's list what we do and don't know. The number of participants is not fixed and I get why that is the case. That makes our program flexible so that it can be used in multiple tournaments.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> This only applies to tournaments that work according to the knockout principle. That means that the best player wins, but that says nothing about the qualities of the other players.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> What do we record about the number of players? A minimum of 2 and no maximum?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> That seems reasonable. Oh, something else: we will have to decide what to do with a game that ends in a draw. Someone has to drop out.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Maybe flip a coin?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> You could also let them both drop out or let them continue both.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> But then we can't plan ahead. We do not know in advance how many people will participate on the next day. We just assume that a winner will be named anyway. How that will be decided, we leave open for now; that is up to the tournament director to decide.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> It is also desirable to have as many games as possible on the same day. So we have to let everyone play every day who hasn't dropped out yet.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> That only works if the number of participants is a power of 2; otherwise you won't have an even number of survivors every day.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Hmm, let me think, yes indeed, a power of 2 is the only way to always have an even number of players left. Shall we demand that the number of participants is a power of 2?</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> No, that would be a strange requirement. It severely limits the number of participants. Let's keep it to at least 2 players and don't demand anything regarding the number of participants.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> So what do we do with an odd number of participants on a day? In that case one person can't play anyway.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> That one is lucky and automatically passes on to the next day. That's not a bad thing, because he will drop out at some point, if he's not the very best.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Okay. Let's do that every day with an odd number of participants.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Say, what exactly is the desired output? What does a game schedule look like?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "desired_output",
+            "video": "",
+            "text": "<speak> It's not about the visual form but about the information stored in it. If we give each participant a unique number, we can draw up a list of numbers for each day in which two consecutive ones play against each other. If there is an odd number, we will immediately pass on the last one from the list to the next day. Eventually we get something like a list of daily lists. That's the game schedule.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "desired_output",
+            "video": "",
+            "text": "<speak> Wait a minute, that's not possible in the way you describe. In that case we would have to know in advance who will win in each game. So we cannot put player numbers in such a list. But if we instead come up with a way to code winners from the previous day, then your approach is doable.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "winner_numbers",
+            "video": "",
+            "text": "<speak> Indeed; we don't need player numbers but winner numbers. For example: w3 means the winner of the third game from the previous day.</speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "winner_numbers",
+            "video": "",
+            "text": "<speak> You see it's not as easy as it looks. So much for the contemplate phase. Let's move on to the next step of 7 C's: Contract.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Now let's draw up the contract. As input we choose a number called n which represents the number of participants. It must be an integer greater than or equal to 2.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Yes. And the output is a list of daily lists containing the winner codes from the previous day. </speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Then the last daily list must consist of 2 codes; that's the final.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Do we also know how many days are played, if we know n and we want to minimize the number of playing days?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "2logn",
+            "video": "",
+            "text": "<speak> Yes, you can calculate that: you have to take the base two logarithm of n and round it up.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "algorithm",
+            "video": "",
+            "text": "<speak> Okay, we're there; let's write this a little more formally.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "algorithm",
+            "video": "",
+            "text": "<speak> So the first daily list has n elements and the last one has 2 elements.</speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "algorithm",
+            "video": "",
+            "text": "<speak> It's getting somewhere don't you think? Now we are ready for the Compose step.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> In what parts could we break this problem down?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> The first is: preparing the list for the first day. That's just a list from w1 to wn where n is the number of participants. Should we link their names to that?</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> No, of course not. After all, we will not receive names, only the number of participants. Who is hiding behind the code w27 is not important to us. This must be recorded outside the program.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Yes, that's right. And then we have the problem of making the next day's list. You should be able to repeat this for every day until the list consists of only two elements.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Because we use the same codes every day, you really only need to know how long the list from the previous day was. That's enough information to make the current day's list.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Oh wait, it can also be done differently. You don't actually need the list from the previous day. We know how long the list should be per day, we've described that in our post condition. </speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "post_condition",
+            "video": "",
+            "text": "<speak> This conclusion comes rather fast. Let's take a closer look at that post condition.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "post_condition",
+            "video": "",
+            "text": "<speak> Um…, I think I understand. Let's move on.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> In that case we don't have to treat the first day as a separate case either.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Indeed. That is not necessary.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Besides making such a daily list, we also need to add that list to our game schedule.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> These two subproblems are probably so simple that we don't need to write a separate function for them. Although it might make the program better readable. We then need something like: \"make day i\", \"add daily list to game schedule\".</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Shall we now apply the 7 C's to these subproblems and then move on?</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Yes, let's do that first, otherwise we can't go any further. Another thing comes to mind: what do we do with the situation when the input does not meet the requirements? Do we check for that?</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Preferably not. I suggest that, as always, we apply Design by Contract and not move to Defensive Programming now. </speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "DFP",
+            "text": "<speak> Let's stop here for a moment to explain these two terms.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> So now we still have to solve those 2 subproblems and then perform the Chart, Code and Check phases of the main problem. </speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Now we fast forward. You can do this yourself.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "functions",
+            "video": "",
+            "text": "<speak> We have now solved the 2 sub-problems and have the following 2 functions</speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "functions",
+            "video": "",
+            "text": "<speak> It's getting more complex but also more exciting right? Now we have arrived at the Chart phase for the main program.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "functions",
+            "video": "",
+            "text": "<speak> With these two tools it becomes very easy: we have to make a daily list for each day and add it to the playlist.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "pseudocode",
+            "video": "",
+            "text": "<speak> Indeed, it is. The main program then looks like this in pseudocode. </speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "pseudocode",
+            "video": "",
+            "text": "<speak> The real work is done, now all that remains is the translation from design to code. In other words we have to translate our design to a language that the computer is able to understand. You can also do the Code phase yourself. We continue with the Check phase.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Finally we have to draw up and implement a test plan. </speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> We do. Given the precondition, we will test the postcondition. As edge cases, I suggest n=2 and n=3. For the normal cases we can take n=9, n=15, n=32, n=53.</speak>"
+        },
+        {
+            "name": "B",
+            "pause": 0.6000000238418579,
+            "img": "",
+            "video": "",
+            "text": "<speak> Agreed. That 32 is also a nice power of 2. And 9 and 15 are just above and below a power of 2, and 53 is a prime number and those are always fun.</speak>"
+        },
+        {
+            "name": "J",
+            "pause": 0.6000000238418579,
+            "img": "testplan",
+            "video": "",
+            "text": "<speak> So the test plan looks like this:</speak>"
+        },
+        {
+            "name": "D",
+            "pause": 0.6000000238418579,
+            "img": "testplan",
+            "video": "",
+            "text": "<speak> The last step is just a formality. A check is needed to confirm that the work was done correctly. If the check fails, then something went wrong in the first 6 steps. But I don't expect this to be the outcome. At this point, we leave both programmers. Try to solve the 2 subproblems yourself and finish the code and test phase of the main program. I suggest you take a good look at the post condition, use it for makeDay(i, n). Thanks for watching, have fun solving your own programming problems, and see you soon. </speak>"
+        }
+    ]
+}
