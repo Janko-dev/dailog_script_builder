@@ -1,0 +1,29 @@
+[start]
+
+[title="DBC vs DP"]
+
+D: Hello R, what are you thinking about?
+R: Well, I was following an online discussion about Design by Contract versus Defensive programming.
+D: Yeah, that people are still discussing this, as if there is a choice!
+R: What do you mean, of course there is a choice.
+D: Technically you are right, but rationally there is only one reasonable option. At its core, it's about whether a programmer should actively deal with invalid input data or not.
+
+[image="no_trespassing", 2]
+
+D: With design by contract you determine the condition that the input data must meet, the so-called precondition. And you define the condition that the output data satisfies, given correct input data, the so-called postcondition. You write your code assuming only valid input. With defensive programming you also assume incorrect input, you have to deal with that in your code.
+R: At first you tend to say, yes of course, it's always good to take incorrect input into account.
+D: But the problem that arises is that you have to add extra software code to handle this incorrect input. And extra code means more work and potentially more errors.
+R: And don't forget that invalid input encompasses a lot, namely anything that is not valid. In practice this is not doable, and so a false impression of robustness can arise.
+D: There are some exceptions where defensive programming is sensible. First, if the end user, the human, directly provides the input data. It's usually wise to make a program foolproof, and you people can act pretty idiotic at times. Second, if you want to protect your own code against misuse.
+
+[image="dumb_people", 2]
+
+R: Besides protecting end users and your own code, perhaps it's good to also protect other programmers? Because programmers often use each other's code.
+D: Applying defensive programming because other programmers can use code the wrong way? Bad idea, because that doesn't solve anything, if they are bad at their job and don't fulfill a contract I wouldn't trust their programs anyway.
+R: But we are only human and can make honest mistakes, and still be good at our jobs.
+D: Yes, I know, that's why you should always test your programs thoroughly, regardless of style. Design by contract is just more unambiguous, requires less code, and you only focus on the core functionality.
+R: As a reading tip I would suggest the original article from Bertrand Meyer, called Applying "Design by Contract". Or you could check out the Wiki about Design by Contract.
+
+[image="DBC", 2]
+
+R: Thanks for our little talk, and till next time.
